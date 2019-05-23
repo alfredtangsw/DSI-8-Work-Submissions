@@ -1,0 +1,82 @@
+## Problem Statement
+
+The new format for the SAT was released in March 2016, intended to prepare students to join the workforce as skilled and educated persons.
+
+**The re-design was intended to:**
+1. Encourage higher participation by:
+    - making the test more transparent
+    - removing penalties for incorrect answers.
+
+
+2. Better prepare students to take on college educations by:
+    - giving students specific areas of study to focus on
+    - ensuring student readiness for college by setting new benchmarks for the new test structure
+
+Sources
+
+1. [Business Insider: SAT is changing the format of its test in 2016](https://www.businessinsider.com/the-sat-is-changing-its-format-in-2016-and-will-be-easier-2015-6/?IR=T)
+2. [College Board's official report on the SAT re-design](https://collegereadiness.collegeboard.org/pdf/test-specifications-redesigned-sat-1.pdf)
+
+**Key questions:**
+1. In which states are participation rates increasing after the re-design? 
+    - If so, why are they increasing? (Are there any trends in the data that explain the increases?)
+2. Are more students achieving the benchmark score after sitting for the redesigned SAT?
+
+## Executive Summary
+
+The SAT format was changed in 2016, resulting in changes in educational policy in several states in the US. This project aims to examine the impact of this change, and what should be done to capitalise on this change moving forward.
+
+The research reveals a strong negative correlation of approximately -0.80 between SAT and ACT participation. As one increases, the other tends to decrease sharply. This is because students who take one test are not likely to take the other, as both are used for the same purpose: college admissions. 
+
+The revamped SAT has been effective at incentivising participation, either by nature of its transparent and less punitive test structure or through government contracts that ensure state sponsorship or incentives for participation. In the case of Illinois and Colorado, both states now offer state-sponsored SAT exams and enjoy full or nearly full participation amongst their high school candidates.
+
+Further investigation reveals that most state averages outperform the national SAT average score, whereas about 50% of all state mean composite scores outperform the national benchmark composite score. This suggests that the SAT may be better-structured, allowing for higher achievement without compromising the quality of tests. This may also be due to the removal of punitive scoring, where wrong answers were given deductions.
+
+There are, however, limitations to this project's analysis. There are not enough samples of data to conclusively prove that the change in the SAT's structure is effective and will have long-lasting impact. 
+
+It is therefore recommended to:
+- Continue gathering data for the new test
+- Factor in student populations in data to give context to participation levels
+- Obtain more government contracts for delivery of SAT exams
+- Persuade more colleges to offer incentives to students to take SATs instead of ACTs, such as higher scholarship awards and better perks.
+
+## Data Dictionary
+
+|Feature|Type|Dataset|Description|Min|Max|
+|---|---|---|---|---|---|
+|**sat_2017_state**|string|SAT 2017|The name of the state in the US for which corresponding SAT scores are displayed.<br>US has 50 States and 1 District of Columbia.| 
+|**sat_2017_participation**|float|SAT 2017|The percentage of the state's high school students participating in the SATs for that year.  <br>Expressed as a float for easier calculation. <br>(e.g. 0.03 means 3% of the state's high school students participated in the SATs that year.)|0.00 |1.00| 
+|**sat_2017_erw**|integer|SAT 2017|The mean score achieved by the state's students for Evidence-based Reading and Writing, **rounded to the nearest whole number.** <br>This section tests a participant's abiility to apply language skills correctly in reading and editing. <br>Unit is integer and represents the average for each state of the US.| 0|800| 
+|**sat_2017_math**|integer|SAT 2017|The mean score achieved by the state's students for Mathematics, **rounded to the nearest whole number.** <br>This section tests a participant's abiility to apply mathematics skills correctly. <br>Unit is integer and represents the average for each state of the US.|0|800| 
+|**sat_2017_total**|integer|SAT 2017|The mean Total score of both sections of the SAT for the year 2017. Derived by taking the mean of the 2 sections of the test.<br>Figure does not necessarily equal to the sum of the means for each section, due to rounding. <br> Unit is integer and represents the average for each state of the US.|0|1600| 
+|**act_2017_state**|string|ACT 2017|The name of the state in the US for which corresponding ACT scores are displayed.<br>US has 50 States and 1 District of Columbia.| 
+|**act_2017_participation**|float|ACT 2017|The percentage of the state's high school students participating in the ACTs for that year.  <br>Expressed as a float for easier calculation. <br>(e.g. 0.03 means 3% of the state's high school students participated in the SATs that year.)|0.00|1.00| 
+|**act_2017_english**|float|ACT 2017|The mean score achieved by the state's high school students for English.<br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This section tests a participant's ability to use English mechanics (grammar etc) and rhetoric.|1.0|36.0| 
+|**act_2017_math**|float|ACT 2017|The mean score achieved by the state's high school students for Mathematics.<br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This section tests a participant's ability to correctly apply mathematics skills.|1.0|36.0| 
+|**act_2017_reading**|float|ACT 2017|The mean score achieved by the state's high school students for Reading.<br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This section tests a participant's reading comprehension skills.|1.0|36.0| 
+|**act_2017_science**|float|ACT 2017|The mean score achieved by the state's high school students for Science.<br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This section tests a participant's Science skills.|1.0 |36.0| 
+|**act_2017_composite**|float|ACT 2017|The mean Composite score for each State, inclusive of all participants. Derived by taking the mean of the 4 sections of the test. <br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This is a key value used by students around the US as a benchmark for whether their ACT score is good.|1.0|36.0| 
+|**sat_2018_state**|string|SAT 2018|The name of the state in the US for which corresponding SAT scores are displayed.<br>US has 50 States and 1 District of Columbia.| 
+|**sat_2018_participation**|float|SAT 2018|The percentage of the state's high school students participating in the SATs for that year.  <br>Expressed as a float for easier calculation. <br>(e.g. 0.03 means 3% of the state's high school students participated in the SATs that year.)|0.00 |1.00| 
+|**sat_2018_erw**|integer|SAT 2018|The mean score achieved by the state's students for Evidence-based Reading and Writing, **rounded to the nearest whole number.** <br>This section tests a participant's abiility to apply language skills correctly in reading and editing. <br>Unit is integer and represents the average for each state of the US.| 0|800| 
+|**sat_2018_math**|integer|SAT 2018|The mean score achieved by the state's students for Mathematics, **rounded to the nearest whole number.** <br>This section tests a participant's abiility to apply mathematics skills correctly. <br>Unit is integer and represents the average for each state of the US.|0|800| 
+|**sat_2018_total**|integer|SAT 2018|The mean Total score of both sections of the SAT for the year 2018. Derived by taking the mean of the 2 sections of the test.<br>Figure does not necessarily equal to the sum of the means for each section, due to rounding. <br> Unit is integer and represents the average for each state of the US.|0|1600| 
+|**act_2018_state**|string|ACT 2018|The name of the state in the US for which corresponding ACT scores are displayed.<br>US has 50 States and 1 District of Columbia.| 
+|**act_2018_participation**|float|ACT 2018|The percentage of the state's high school students participating in the ACTs for that year.  <br>Expressed as a float for easier calculation. <br>(e.g. 0.03 means 3% of the state's high school students participated in the SATs that year.)|0.00|1.00| 
+|**act_2018_english**|float|ACT 2018|The mean score achieved by the state's high school students for English.<br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This section tests a participant's ability to use English mechanics (grammar etc) and rhetoric.|1.0|36.0| 
+|**act_2018_math**|float|ACT 2018|The mean score achieved by the state's high school students for Mathematics.<br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This section tests a participant's ability to correctly apply mathematics skills.|1.0|36.0| 
+|**act_2018_reading**|float|ACT 2018|The mean score achieved by the state's high school students for Reading.<br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This section tests a participant's reading comprehension skills.|1.0|36.0| 
+|**act_2018_science**|float|ACT 2018|The mean score achieved by the state's high school students for Science.<br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This section tests a participant's Science skills.|1.0 |36.0| 
+|**act_2018_composite**|float|ACT 2018|The mean Composite score for each State, inclusive of all participants. Derived by taking the mean of the 4 sections of the test. <br>**Individual score is finalised as an integer, but the state's mean score is not.**<br>This is a key value used by students around the US as a benchmark for whether their ACT score is good.|1.0|36.0| 
+
+## References
+1. [Business Insider: SAT is changing the format of its test in 2016](https://www.businessinsider.com/the-sat-is-changing-its-format-in-2016-and-will-be-easier-2015-6/?IR=T)
+2. [College Board's official report on the SAT re-design](https://collegereadiness.collegeboard.org/pdf/test-specifications-redesigned-sat-1.pdf)
+3. https://www.act.org/content/dam/act/unsecured/documents/pdfs/R1670-college-readiness-benchmarks-2017-11.pdf
+4. https://collegereadiness.collegeboard.org/about/scores/benchmarks
+5. https://blog.prepscholar.com/average-sat-scores-by-state-most-recent
+6. https://www.edweek.org/ew/section/multimedia/states-require-students-take-sat-or-act.html
+7. https://www.chicagotribune.com/news/ct-illinois-chooses-sat-met-20160211-story.html
+8. https://www.washingtonpost.com/education/2018/10/23/sat-reclaims-title-most-widely-used-college-admission-test/
+9. https://www.edweek.org/ew/articles/2018/10/17/math-scores-slide-to-a-20-year-low.html
+10. https://www.act.org/content/dam/act/secured/documents/cccr2018/National-CCCR-2018.pdf
