@@ -36,9 +36,13 @@ Task: Create a regression model based on Ames Housing Dataset to predict the pri
         - (Retained because it remained in list after Recursive Feature Elimination from 20 to 15 features)
         - Possibly apartments/townhouses
 
-**Business Recommendation:** House buyers looking to invest in housing should look for houses in the neighbourhoods of Crawford,Green Hills, Northridge, Northridge Heights, Stone Brook, below their median prices. 
+**Business Recommendation:** 
+- Maintain the overall quality of their homes.
+- Periodically renovate/remodel their houses. Quality deteriorates with age.
+- Find houses with high square footage and relatively low price per square foot for their neighbourhood.
+- Seek out houses in the neighbourhoods of Crawford,Green Hills, Northridge, Northridge Heights, Stone Brook.
+    - Investors should seek out undervalued houses; houses whose prices do not accurately reflect what their attributes are worth.
 
-If their other features such as Overall Quality and 1st Floor Square Footage are above the mode or median for their respective categories, they could make a profit over time if the house is maintained well/remodelled regularly.
 
 |Neighborhood|Median Price|
 |----|----|
